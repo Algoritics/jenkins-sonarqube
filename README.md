@@ -48,7 +48,7 @@ cat ./jenkins/secrets/initialAdminPassword
 
 3. During the setup wizard, choose `Install suggested plugins`.
 4. For this demonstration, click `Continue as Admin`.
-5. For this demonstration, Click `Save and Finish`.
+5. For this demonstration, click `Save and Finish`.
 6. Click `Start using Jenkins`.
 
 
@@ -152,11 +152,9 @@ SonarQube Project Setup
 6. Select `Use existing token`.
 7. Paste your token into the textbox.
 8. Click `Continue` button.
-9. Copy token and store somewhere secure.
-10. Click `Continue` button.
-11. Click `Java` button.
-12. Click `Maven` button.
-13. Copy `mvn sonar:sonar` code and store somewhere secure.
+9. Click `Java` button.
+10. Click `Maven` button.
+11. Copy `mvn sonar:sonar` code and store somewhere secure.
 
 
 Install SonarScanner for Jenkins
