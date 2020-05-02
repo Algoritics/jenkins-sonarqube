@@ -186,17 +186,15 @@ Jenkins Project Setup
 7. Enter `https://github.com/Algoritics/jenkins-maven-test.git`.
 8. Fill `Build` -> `Goals and option` with `clean install`.
 9. Click `Add post-build step`.
-10. Select `Execute SonarQube Scanner`.
-11. Fill `Path to project properties` with `sonar-project.properties`.
-12. Enter project key and login in `Analysis properties` textbox (replace login with generated sonar token). Example:
+10. Select `Invoke top-level Maven targets`.
+11. Set `Goals` to (replace login with generated sonar token):
 
 ```
-sonar.projectKey=jenkins-maven-test
-sonar.login=ba7a9af4518eea0acb77a6b7fc19ea01a13d2f7e
+sonar:sonar -Dsonar.projectKey=jenkins-maven-test -Dsonar.host.url=http://sonarqube:9000 -Dsonar.login=ba7a9af4518eea0acb77a6b7fc19ea01a13d2f7e
 ```
 
-13. Click `Save` button.
-14. Click `Build Now` button to verify working.
+12. Click `Save` button.
+13. Click `Build Now` button to verify working.
 
 
 
