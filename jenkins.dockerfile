@@ -3,9 +3,12 @@ FROM jenkins/jenkins:lts-centos
 # switch to root for install of maven and sonar scanner
 USER root
 
-# install maven
-RUN yum -y update && yum -y install maven wget python3 make java-11-openjdk-devel java-11-openjdk
+# prereqs for sonar scanner
+RUN yum -y update && yum -y install wget maven java-11-openjdk-devel java-11-openjdk
 RUN alternatives --set java java-11-openjdk.x86_64
+
+# prereqs for example projects
+RUN yum -y update && yum -y python3 make
 RUN pip3 install -U pip pytest coverage flake8
 
 # install sonar scanner
